@@ -1,0 +1,54 @@
+body {
+    background-color: #f2ece7;
+}
+
+.contact__header {
+    height: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: #8a7869;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: white;
+    margin-top: 0;
+}
+
+.contact__container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.contact__form--header {
+    text-align: center;
+    color: #8a7869;
+}
+
+.contact__form--container {
+    border: 1px solid #cdcbca;
+    background-color: white;
+}
+
+.contact__form--content {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.contact__form--name {
+    margin-bottom: 50px;
+}
+
+.contact__form--email {
+    margin-bottom: 50px;
+}
+
+.contact__form--password {
+    margin-bottom: 50px;
+}
+
+.contact__form--button {
+    /*  インライン置換要素を中央に配置する方法*/
+
+    background-color: #82766a;
+    color: white;
+    border: none;
+    margin-bottom: 50px;
+}

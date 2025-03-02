@@ -1,0 +1,12 @@
+.contact__header {
+    height: 80px;
+    text-align: center;
+    font-size: 40px;
+    color: #8a7869;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.contact__container {
+    width: 800px;
+    margin: 0 auto;
+}
