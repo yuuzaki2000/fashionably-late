@@ -9,6 +9,6 @@ class ContactController extends Controller
     //
     public function index()
     {
-        return view('auth.login');
+        return view('index');
     }
 }
