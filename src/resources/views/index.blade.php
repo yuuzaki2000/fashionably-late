@@ -67,5 +67,8 @@
         <button type="submit">確認画面</button>
       </form>
     </section>
+    <section>
+        <a href="/login">ログイン画面へ</a>
+    </section>
 </main>
 @endsection

@@ -22,6 +22,7 @@ Route::post('/thanks', [ContactController::class, 'thanks']);
 Route::get('/admin', [ContactController::class, 'admin']);
 
 /*Fortify認証 */
+Route::get('/', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [AuthController::class, 'register']);
 

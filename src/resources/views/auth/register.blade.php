@@ -16,7 +16,7 @@
           <h2 class="contact__form--header">Register</h2>
         </section>
         <section class="contact__form--container">
-          <form class="contact__form--content" action="/register" method="post">
+          <form class="contact__form--content" action="/login" method="post">
           @csrf
               <div class="contact__form--name">
                   <div><p style="color:#8A7869;">お名前</p></div>
@@ -36,6 +36,7 @@
                       <input type="password" name="password" placeholder="coachtech1106" size="40"/>
                   </div>
               </div>
+            </div>
               <button class="contact__form--button" type="submit">登録</button>
             </form>
         </section>
