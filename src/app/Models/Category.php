@@ -10,4 +10,8 @@ class Category extends Model
     use HasFactory;
 
     protected $fillable = ['content'];
+
+    public function getCategory(){
+        return $this->content;
+    }
 }

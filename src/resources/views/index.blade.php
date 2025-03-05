@@ -7,7 +7,8 @@
         <h2 class="contact__form--header"><p>Contact</p></h2>
     </section>
     <section>
-      <form class="contact__form--content">
+      <form class="contact__form--content" action="/confirm" method="post">
+      @csrf
         <dl>
             <dt>お名前</dt>
             <dd class="contact__input">
@@ -18,9 +19,9 @@
         <div>
             <dt>性別</dt>
             <dd class="contact__input">
-                <input type="radio" name="gender" value="male">男性
-                <input type="radio" name="gender" value="female">女性
-                <input type="radio" name="gender" value="other">その他
+                <input type="radio" name="gender" value="1">男性
+                <input type="radio" name="gender" value="2">女性
+                <input type="radio" name="gender" value="3">その他
             </dd>
         </div>
         <div>
@@ -51,8 +52,9 @@
             <label>お問い合わせの種類</label>
             <dd class="contact__input">
                 <select name="detail">
-                    <option value="question">質問</option>
-                    <option value="request">要望</option>
+                    <option value="商品の交換">商品の交換</option>
+                    <option value="要望">要望</option>
+                    <option value="クレーム">クレーム</option>
                 </select>
             </dd>
         </div>

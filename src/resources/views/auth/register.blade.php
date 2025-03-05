@@ -13,10 +13,11 @@
     </header>
     <main class="contact__container">
         <section>
-          <h2 class="contact__form--header">Login</h2>
+          <h2 class="contact__form--header">Register</h2>
         </section>
         <section class="contact__form--container">
-          <form class="contact__form--content">
+          <form class="contact__form--content" action="/register" method="post">
+          @csrf
               <div class="contact__form--name">
                   <div><p style="color:#8A7869;">お名前</p></div>
                   <div>
@@ -35,7 +36,7 @@
                       <input type="password" name="password" placeholder="coachtech1106" size="40"/>
                   </div>
               </div>
-              <button class="contact__form--button" type="submit">ログイン</button>
+              <button class="contact__form--button" type="submit">登録</button>
             </form>
         </section>
       </main>

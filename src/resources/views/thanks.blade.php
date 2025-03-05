@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{asset('css/thanks.css')}}">
 </head>
 <body>
-    <div class="container">
-        <div class="front">
-            <p>お問い合わせありがとうございました</p>
-            <a href="">HOME</a> {{--練習問題参照--}}
+    <div class="thanks__container">
+        <div class="thanks__parent">
+            <div class="thanks__back">Thank you</div>
+            <div class="thanks__front">
+                <div><p>お問い合わせありがとうございました</p></div>
+                <button>HOME</button>
+            </div>
         </div>
-        <div class="back"><p>Thank you</p></div>
     </div>
 </body>
 </html>

@@ -2,9 +2,13 @@
 <link rel="stylesheet" href="{{asset('css/admin.css')}}">
 
 @section('content')
-<main class="contact__container">
+<main class="item__container">
     <section>
-        <h2 class="contact__form--header"><p>Contact</p></h2>
+        <h2 class="item__form--header"><p>Admin</p></h2>
+        <form action="/logout" method="post">
+        @csrf
+            <button type="submit" class="logout-btn">ログアウト</button>
+        </form>
     </section>
     <section class="btn__group">
         <div>
@@ -30,7 +34,7 @@
             <button type="submit">検索</button>
         </div>
         <div>
-            <a class="reset-btn" href="/admin">リセット</a>
+            <button type="submit">リセット</button>
         </div>
     </section>
     <section>
@@ -51,7 +55,7 @@
                 <td>{{$item['last_name']}}</td>
                 <td>{{$item['gender']}}</td>
                 <td>{{$item['email']}}</td>
-                <td>{{$item['content']}}</td>
+                <td>{{$item->category->getCategory()}}</td>
             </tr>
             @endforeach
         </table>

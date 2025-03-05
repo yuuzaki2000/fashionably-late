@@ -16,7 +16,8 @@
           <h2 class="contact__form--header">Login</h2>
         </section>
         <section class="contact__form--container">
-          <form class="contact__form--content">
+          <form class="contact__form--content" action="/login" method="post">
+          @csrf
               <div class="contact__form--email">
                   <div><p style="color:#8A7869;">メールアドレス</p></div>
                   <div>
