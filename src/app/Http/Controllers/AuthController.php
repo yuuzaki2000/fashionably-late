@@ -7,20 +7,9 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     //
-    public function index()
-    {
+    public function index(){
         return view('index');
     }
 
-    public function login()
-    {
-        return view('auth.login');
-    }
-
-    public function register()
-    {
-        return view('auth.register');
-    }
-
-    
+    /* ユーザーが、loginメソッドやregisterメソッドは定義する必要はない。*/
 }

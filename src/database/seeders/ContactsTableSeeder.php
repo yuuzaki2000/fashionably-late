@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Contact;
+use App\Models\Contact;   /* 必ずモデルのインポートを書く  */
 
 class ContactsTableSeeder extends Seeder
 {

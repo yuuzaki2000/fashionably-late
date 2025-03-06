@@ -51,20 +51,23 @@
         <div>
             <label>お問い合わせの種類</label>
             <dd class="contact__input">
-                <select name="detail">
-                    <option value="商品の交換">商品の交換</option>
-                    <option value="要望">要望</option>
-                    <option value="クレーム">クレーム</option>
+                <select name="content" name="category_id">
+                    <option value="">無し</option>
+                    <option value="1">商品のお届けについて</option>
+                    <option value="2">商品の交換について</option>
+                    <option value="3">商品トラブル</option>
+                    <option value="4">ショップへのお問い合わせ</option>
+                    <option value="5">その他</option>
                 </select>
             </dd>
         </div>
         <div>
             <label>お問い合わせ内容</label>
             <dd class="contact__input">
-                <textarea name="content" id="" cols="30" rows="10"></textarea>
+                <textarea name="detail" cols="30" rows="10"></textarea>
             </dd>
         </div>
-        <button type="submit">確認画面</button>
+        <button type="submit">確認画面へ</button>
       </form>
     </section>
     <section>
