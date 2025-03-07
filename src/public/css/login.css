@@ -12,6 +12,13 @@ body {
     margin-top: 0;
 }
 
+.contact__header--btn {
+    width: 100px;
+    color: #8a7869;
+    background-color: #f5f5f5;
+    border: 1px solid #8a7869;
+}
+
 .contact__container {
     width: 800px;
     margin: 0 auto;

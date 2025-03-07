@@ -12,8 +12,8 @@
         <dl>
             <dt>お名前</dt>
             <dd class="contact__input">
-                <input type="text" name="first_name" placeholder="山田">
-                <input type="text" name="last_name" placeholder="太郎">
+                <input type="text" name="last_name" placeholder="山田">
+                <input type="text" name="first_name" placeholder="太郎">
             </dd>
         </dl>
         <div>

@@ -23,17 +23,32 @@
                   <div>
                     <input type="text" name="name" value="{{ old('name') }}" placeholder="山田 太郎" size="40"/>
                   </div>
+                  <div>
+                    @error('name')
+                    {{$message}}                        
+                    @enderror
+                  </div>
               </div>
               <div class="contact__form--email">
                   <div><p style="color:#8A7869;">メールアドレス</p></div>
                   <div>
                     <input type="email" name="email" value="{{ old('email') }}" placeholder="test@example.com" size="40"/>
                   </div>
+                  <div>
+                    @error('email')
+                    {{$message}}                        
+                    @enderror
+                  </div>
               </div>
               <div class="contact__form--password">
                   <div><p style="color:#8A7869;">パスワード</p></div>
                   <div>
                       <input type="password" name="password" placeholder="coachtech1106" size="40"/>
+                  </div>
+                  <div>
+                    @error('password')
+                    {{$message}}                        
+                    @enderror
                   </div>
               </div>
               <div class="contact__form--password-confirmation">

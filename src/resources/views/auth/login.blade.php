@@ -9,7 +9,12 @@
 </head>
 <body>
     <header>
-        <div class="contact__header"><span>FashionablyLate</span></div>
+        <div class="contact__header">
+          <span>FashionablyLate</span>
+        </div>
+        <div>
+          <a class="contact__header--btn" href="/register">register</a>
+        </div>
     </header>
     <main class="contact__container">
         <section>
