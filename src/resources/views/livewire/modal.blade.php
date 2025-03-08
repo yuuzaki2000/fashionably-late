@@ -32,7 +32,7 @@
     {{-- The best athlete wants his opponent at his best. --}}
   <div>
     <div x-data="{ open: false }">
-        <button @click="open = true">モーダル画面を開く</button>
+        <button @click="open = true">詳細</button>
         <div class="overlay" x-show="open" @click.outside="open = false">
         <div class="content" >
         <div>

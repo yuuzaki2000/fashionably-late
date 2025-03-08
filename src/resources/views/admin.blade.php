@@ -1,36 +1,12 @@
 @extends('layout.default')
-<style>
-.contact__form--header {
-    text-align: center;
-    color: #8a7869;
-}
-
-.btn__group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.admin th {
-    background-color: #b7efb7;
-}
-
-.css-pagination {
-    display: flex;
-    justify-content: space-between;
-}
-
-svg.w-5.h-5 {
-    width: 30px;
-    height: 30px;
-}
-</style>
+<link rel="stylesheet" href="{{asset('css/admin.css')}}">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
 @livewireStyles
 
 @section('content')
 <main class="item__container">
     <section>
-        <div class="confirm__heading">
+        <div class="admin__heading">
             <h2>Admin</h2>
           </div>
         <form action="/logout" method="post">
@@ -71,22 +47,21 @@ svg.w-5.h-5 {
     </section>
     <section>
         <table class="admin_table" border="1">
-            <tr>
-                <th >苗字</th>
-                <th>名前</th>
-                <th>性別</th>
-                <th>メールアドレス</th>
-                <th>お問い合わせの種類</th>
+            <tr class="admin__table--header">
+                <th class="admin__table--header-text">苗字</th>
+                <th class="admin__table--header-text">名前</th>
+                <th class="admin__table--header-text">性別</th>
+                <th class="admin__table--header-text">メールアドレス</th>
+                <th class="admin__table--header-text">お問い合わせの種類</th>
                 <th></th>
             </tr>
             @foreach ($items as $item)
-            <tr class="table__data">
-                <td>{{$item['first_name']}}</td>
+            <tr class="admin__table--data">
                 <td>{{$item['last_name']}}</td>
+                <td>{{$item['first_name']}}</td>
                 <td>{{$item['gender']}}</td>
                 <td>{{$item['email']}}</td>
                 <td>{{$item->category->getCategory()}}</td>
-                <td><button>詳細</button></td>
                 <td><livewire:modal></td>
             </tr>
             @endforeach

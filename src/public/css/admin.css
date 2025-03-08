@@ -1,1 +1,31 @@
+.contact__form--header {
+    text-align: center;
+    color: #8a7869;
+}
 
+.btn__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin th {
+    background-color: #b7efb7;
+}
+
+.css-pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
+
+.admin__table--header {
+    background-color: #8a7869;
+}
+
+.admin__table--header-text {
+    color: white;
+}
