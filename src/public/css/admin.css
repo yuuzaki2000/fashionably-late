@@ -24,8 +24,24 @@ svg.w-5.h-5 {
 
 .admin__table--header {
     background-color: #8a7869;
+    height: 40px;
 }
 
 .admin__table--header-text {
     color: white;
+}
+
+.admin__table--container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.admin__table--data {
+    height: 50px;
+}
+
+.search_input {
+    width: 400px;
+    height: 40px;
 }

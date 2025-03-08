@@ -9,14 +9,16 @@
         <div class="admin__heading">
             <h2>Admin</h2>
           </div>
-        <form action="/logout" method="post">
-        @csrf
-            <button type="submit" class="logout-btn">ログアウト</button>
-        </form>
+        @if (Auth::check())
+          <form action="/logout" method="post">
+          @csrf
+                <button type="submit" class="logout-btn">ログアウト</button>
+          </form>
+        @endif
     </section>
     <section class="btn__group">
         <div>
-            <input type="text" name="keyword">
+            <input class="search_input" type="text" name="search_keyword" placeholder="名前やメールアドレスを入力してください">
         </div>
         <div>
             <select name="gender">
@@ -45,8 +47,8 @@
         <div><button>エクスポート</button></div>
         <div>{{$items->links()}}</div>
     </section>
-    <section>
-        <table class="admin_table" border="1">
+    <section class="admin__table--container">
+        <table class="admin__table">
             <tr class="admin__table--header">
                 <th class="admin__table--header-text">苗字</th>
                 <th class="admin__table--header-text">名前</th>

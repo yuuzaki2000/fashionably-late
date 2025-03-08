@@ -26,7 +26,9 @@ Route::post('/categories', [CategoryController::class, 'store']);
 
 /*Fortify認証 */
 Route::get('/', [AuthController::class, 'index']);
-/*  Route::post('/login', [AuthController::class, 'login']); */
-/*  Route::post('/register', [AuthController::class, 'register']);  /*
+
+/* FormRequestを使用しないなら、下記は定義する必要ない */
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
 
 

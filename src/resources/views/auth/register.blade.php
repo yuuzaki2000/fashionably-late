@@ -32,7 +32,7 @@
               <div class="contact__form--email">
                   <div><p style="color:#8A7869;">メールアドレス</p></div>
                   <div>
-                    <input type="email" name="email" value="{{ old('email') }}" placeholder="test@example.com" size="40"/>
+                    <input type="text" name="email" value="{{ old('email') }}" placeholder="test@example.com" size="40"/>
                   </div>
                   <div>
                     @error('email')
