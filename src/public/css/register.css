@@ -22,6 +22,13 @@ body {
     color: #8a7869;
 }
 
+.contact__header--btn {
+    width: 100px;
+    color: #8a7869;
+    background-color: #f5f5f5;
+    border: 1px solid #8a7869;
+}
+
 .contact__form--container {
     border: 1px solid #cdcbca;
     background-color: white;
@@ -44,11 +51,18 @@ body {
     margin-bottom: 50px;
 }
 
-.contact__form--button {
-    /*  インライン置換要素を中央に配置する方法*/
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
 
-    background-color: #82766a;
-    color: white;
+.form__button-submit {
+    padding: 10px;
+    width: 15%;
+    height: 30px;
     border: none;
-    margin-bottom: 50px;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
 }

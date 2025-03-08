@@ -18,11 +18,11 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::post('/thanks', [ContactController::class, 'store']);
 
 Route::get('/admin', [ContactController::class, 'admin']);
-
 Route::post('/categories', [CategoryController::class, 'store']);
+
+Route::post('/thanks', [ContactController::class, 'store']);
 
 /*Fortify認証 */
 Route::get('/', [AuthController::class, 'index']);

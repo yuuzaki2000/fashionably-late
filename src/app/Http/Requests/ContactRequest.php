@@ -31,7 +31,7 @@ class ContactRequest extends FormRequest
             'email' => 'required|email',
             'tel' => ['required', 'numeric', 'digits_between:10,11'],
             'address' => 'required',
-            'category_id' => 'required',
+        /*  'category_id' => 'required',  */
             'detail' => ['required', 'max:120'],
         ];
     }
@@ -48,7 +48,7 @@ class ContactRequest extends FormRequest
             'tel.numeric' => '電話番号は数字で入力してください',
             'tel.digits_between' => '電話番号は10~11桁で入力してください',
             'address.required' => '住所を入力してください',
-            'category_id.required' => 'お問い合わせ種別を選択してください',
+        /*  'category_id.required' => 'お問い合わせ種別を選択してください',  */
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max' => 'お問い合わせ内容は120文字以内で入力してください',
         ];

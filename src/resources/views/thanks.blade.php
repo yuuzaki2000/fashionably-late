@@ -13,7 +13,8 @@
             <div class="thanks__back">Thank you</div>
             <div class="thanks__front">
                 <div><p>お問い合わせありがとうございました</p></div>
-                <button>HOME</button>
+                <a href="/" style="border:1px solid #000;background-color: #bba99a;
+    color: #ffffff;">HOME</a>
             </div>
         </div>
     </div>

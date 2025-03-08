@@ -10,6 +10,9 @@
 <body>
     <header>
         <div class="contact__header"><span>FashionablyLate</span></div>
+        <div>
+          <a class="contact__header--btn" href="/login">login</a>
+        </div>
     </header>
     <main class="contact__container">
         <section>
@@ -51,13 +54,14 @@
                       </div>
                     @enderror
               </div>
+              {{--}}
               <div class="contact__form--password-confirmation">
                 <div><p style="color:#8A7869;">パスワード確認</p></div>
                 <div>
                     <input type="password" name="password_confirmation" placeholder="coachtech1106" size="40"/>
                 </div>
-            </div>
-            </div>
+              </div>
+              --}}
               <button class="contact__form--button" type="submit">登録</button>
             </form>
         </section>

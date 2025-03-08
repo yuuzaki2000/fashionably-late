@@ -64,7 +64,7 @@
                 <td>{{$item['gender']}}</td>
                 <td>{{$item['email']}}</td>
                 <td>{{$item->category->getCategory()}}</td>
-                <td><livewire:modal></td>
+                <td><livewire:modal id="{{$item['id']}}"></td>
             </tr>
             @endforeach
         </table>
