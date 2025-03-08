@@ -24,6 +24,8 @@ svg.w-5.h-5 {
     height: 30px;
 }
 </style>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+@livewireStyles
 
 @section('content')
 <main class="item__container">
@@ -85,9 +87,11 @@ svg.w-5.h-5 {
                 <td>{{$item['email']}}</td>
                 <td>{{$item->category->getCategory()}}</td>
                 <td><button>詳細</button></td>
+                <td><livewire:modal item="Hello"></td>
             </tr>
             @endforeach
         </table>
     </section>
 </main>
+@livewireScripts
 @endsection
