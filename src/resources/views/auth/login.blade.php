@@ -28,17 +28,22 @@
                   <div>
                     <input type="text" name="email" value="{{ old('email') }}" placeholder="test@example.com" size="40"/>
                   </div>
-                  <div>
                     @error('email')
+                      <div>
                         {{$errors->first('email')}}
+                      </div>
                     @enderror
-                  </div>
               </div>
               <div class="contact__form--password">
                   <div><p style="color:#8A7869;">パスワード</p></div>
                   <div>
                       <input type="password" name="password" placeholder="coachtech1106" size="40"/>
                   </div>
+                    @error('password')
+                      <div>
+                        {{$errors->first('password')}}
+                      </div>
+                    @enderror
               </div>
               <button class="contact__form--button" type="submit">ログイン</button>
             </form>
