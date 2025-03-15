@@ -61,7 +61,7 @@
               <tr class="confirm-table__row">
                 <th class="confirm-table__header">お問い合わせの種類</th>
                 <td class="confirm-table__text">
-                  <input type="text" name="author_id" value="{{$form['content']}}" />
+                  <input type="text" name="category_id" value="{{$form['category_id']}}" />
                 </td>
               </tr>
               <tr class="confirm-table__row">

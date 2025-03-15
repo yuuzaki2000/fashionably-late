@@ -19,12 +19,12 @@ class ContactController extends Controller
     }
 
     public function confirm(ContactRequest $request){
-        $form = $request->only(['category_id','first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'content', 'detail']);
+        $form = $request->all();
         return view('confirm', compact('form'));
     }
 
     public function store(Request $request){
-        $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contact = $request->all();
         Contact::create($contact);
         return redirect('/admin');
     }

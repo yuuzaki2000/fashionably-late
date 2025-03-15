@@ -28,9 +28,11 @@
             </select>
         </div>
         <div>
-            <select class="select__content" name="content">
-                <option value=""></option>
-                <option value=""></option>
+            <select class="select__contact--id" name="contact_id">
+                <option value="">お問い合わせの種類</option>
+                @foreach ($items as $item)
+                    <option value="{{$item['contact_id']}}">{{$item->category->getCategory()}}</option>
+                @endforeach
             </select>
         </div>
         <div>
@@ -50,8 +52,7 @@
     <section class="admin__table--container">
         <table class="admin__table">
             <tr class="admin__table--header">
-                <th class="admin__table--header-text">苗字</th>
-                <th class="admin__table--header-text">名前</th>
+                <th class="admin__table--header-text">お名前</th>
                 <th class="admin__table--header-text">性別</th>
                 <th class="admin__table--header-text">メールアドレス</th>
                 <th class="admin__table--header-text">お問い合わせの種類</th>
@@ -59,8 +60,7 @@
             </tr>
             @foreach ($items as $item)
             <tr class="admin__table--data">
-                <td>{{$item['last_name']}}</td>
-                <td>{{$item['first_name']}}</td>
+                <td>{{$item['last_name'] . " " . $item['first_name']}}</td>
                 <td>{{$item['gender']}}</td>
                 <td>{{$item['email']}}</td>
                 <td>{{$item->category->getCategory()}}</td>
