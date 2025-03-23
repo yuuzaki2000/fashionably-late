@@ -14,8 +14,8 @@ class ContactController extends Controller
     }
 
     public function admin(){
-        $items = Contact::Paginate(7);
-        return view('admin', compact('items'));
+        $contacts = Contact::paginate(7);
+        return view('admin', compact('contacts'));
     }
 
     public function confirm(ContactRequest $request){
@@ -27,5 +27,10 @@ class ContactController extends Controller
         $contact = $request->all();
         Contact::create($contact);
         return redirect('/admin');
+    }
+
+    public function search(Request $request){
+        $contacts = Contact::where('first_name','like',"'%' . $request->keyword . '%'")->get();
+        return view('/admin', compact('contacts'));
     }
 }

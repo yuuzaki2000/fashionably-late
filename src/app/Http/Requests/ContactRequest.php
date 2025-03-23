@@ -29,9 +29,11 @@ class ContactRequest extends FormRequest
             'first_name' => 'required',
             'gender' => 'required',
             'email' => 'required|email',
-            'tel' => ['required', 'numeric', 'digits_between:10,11'],
+            'tel-first' => 'required|numeric|digits_between:1,5',
+            'tel-second' => 'required|numeric|digits_between:1,5',
+            'tel-third' => 'required|numeric|digits_between:1,5',
             'address' => 'required',
-        /*  'category_id' => 'required',  */
+            'category_id' => 'required',
             'detail' => ['required', 'max:120'],
         ];
     }
@@ -44,11 +46,17 @@ class ContactRequest extends FormRequest
             'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスはメール形式で入力してください',
-            'tel.required' => '電話番号を入力してください',
-            'tel.numeric' => '電話番号は数字で入力してください',
-            'tel.digits_between' => '電話番号は10~11桁で入力してください',
+            'tel-first.required' => '電話番号を入力してください',
+            'tel-first.numeric' => '電話番号は数字で入力してください',
+            'tel-first.digits_between' => '電話番号は5桁以内で入力してください',
+            'tel-second.required' => '電話番号を入力してください',
+            'tel-second.numeric' => '電話番号は数字で入力してください',
+            'tel-second.digits_between' => '電話番号は5桁以内で入力してください',
+            'tel-third.required' => '電話番号を入力してください',
+            'tel-third.numeric' => '電話番号は数字で入力してください',
+            'tel-third.digits_between' => '電話番号は5桁以内で入力してください',
             'address.required' => '住所を入力してください',
-        /*  'category_id.required' => 'お問い合わせ種別を選択してください',  */
+            'category_id.required' => 'お問い合わせ種別を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max' => 'お問い合わせ内容は120文字以内で入力してください',
         ];

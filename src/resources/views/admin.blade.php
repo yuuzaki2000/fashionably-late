@@ -4,7 +4,7 @@
 @livewireStyles
 
 @section('content')
-<main class="item__container">
+<main class="contact__container">
     <section>
         <div class="admin__heading">
             <h2>Admin</h2>
@@ -17,8 +17,10 @@
         @endif
     </section>
     <section class="btn__group">
+      <form class="search-form" action="" method="post">
+        @csrf
         <div>
-            <input class="search_input" type="text" name="search_keyword" placeholder="名前やメールアドレスを入力してください">
+            <input class="keyword_input" type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
         </div>
         <div>
             <select name="gender">
@@ -30,8 +32,8 @@
         <div>
             <select class="select__contact--id" name="contact_id">
                 <option value="">お問い合わせの種類</option>
-                @foreach ($items as $item)
-                    <option value="{{$item['contact_id']}}">{{$item->category->getCategory()}}</option>
+                @foreach ($contacts as $contact)
+                    <option value="{{$contact['contact_id']}}">{{$contact->category->getCategory()}}</option>
                 @endforeach
             </select>
         </div>
@@ -41,13 +43,14 @@
         <div>
             <button type="submit">検索</button>
         </div>
-        <div>
-            <button type="submit">リセット</button>
-        </div>
+      </form>
+      <div>
+        <button type="submit">リセット</button>
+      </div>
     </section>
     <section class="css-pagination">
         <div><button>エクスポート</button></div>
-        <div>{{$items->links()}}</div>
+        <div>{{$contacts->links()}}</div>
     </section>
     <section class="admin__table--container">
         <table class="admin__table">
@@ -58,13 +61,13 @@
                 <th class="admin__table--header-text">お問い合わせの種類</th>
                 <th></th>
             </tr>
-            @foreach ($items as $item)
+            @foreach ($contacts as $contact)
             <tr class="admin__table--data">
-                <td>{{$item['last_name'] . " " . $item['first_name']}}</td>
-                <td>{{$item['gender']}}</td>
-                <td>{{$item['email']}}</td>
-                <td>{{$item->category->getCategory()}}</td>
-                <td><livewire:modal id="{{$item['id']}}"></td>
+                <td>{{$contact['last_name'] . " " . $contact['first_name']}}</td>
+                <td>{{$contact['gender']}}</td>
+                <td>{{$contact['email']}}</td>
+                <td>{{$contact->category->getCategory()}}</td>
+                <td><livewire:modal id="{{$contact['id']}}"></td>
             </tr>
             @endforeach
         </table>

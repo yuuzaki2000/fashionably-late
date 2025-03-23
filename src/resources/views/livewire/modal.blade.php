@@ -39,13 +39,11 @@
           <p><button class="close-btn" @click="open = false">x</button></p>
           <p>モーダル画面</p>
           <ul>
-            @foreach ($contacts as $contact)
             <li>
               {{$contact->last_name}}
               {{$contact->first_name}}
               <button wire:click="delUser({{$contact->id}})">削除</button>
             </li>
-            @endforeach
           </ul>
         </div>
         </div>

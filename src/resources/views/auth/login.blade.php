@@ -30,7 +30,7 @@
                   </div>
                     @error('email')
                       <div>
-                        {{$errors->first('email')}}
+                        {{$message}}
                       </div>
                     @enderror
               </div>

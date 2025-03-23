@@ -8,6 +8,11 @@
     justify-content: space-between;
 }
 
+.search-form {
+    display: flex;
+    justify-content: space-between;
+}
+
 .admin th {
     background-color: #b7efb7;
 }
@@ -41,7 +46,7 @@ svg.w-5.h-5 {
     height: 50px;
 }
 
-.search_input {
+.keyword_input {
     width: 400px;
     height: 40px;
 }

@@ -53,11 +53,23 @@
         <div>
             <dt>電話番号<span style="color:red;">※</span></dt>
             <dd class="contact__input">
-                <input type="tel" name="tel" placeholder="080-1234-5678">
+                <input type="tel" name="tel-first" placeholder="080">-
+                <input type="tel" name="tel-second" placeholder="1234">-
+                <input type="tel" name="tel-third" placeholder="5678">
             </dd>
-            @error('tel')
+            @error('tel-first')
             <dd>
-                {{$errors->first('tel')}}
+                {{$errors->first('tel-first')}}
+            </dd>
+            @enderror
+            @error('tel-second')
+            <dd>
+                {{$errors->first('tel-second')}}
+            </dd>
+            @enderror
+            @error('tel-third')
+            <dd>
+                {{$errors->first('tel-third')}}
             </dd>
             @enderror
         </div>
